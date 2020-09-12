@@ -46,4 +46,4 @@ nnoremap <silent> K :call <SID>show_documentation()<CR>
 
 call plug#begin()
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-call plug#end()syntax on
+call plug#end()
