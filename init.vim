@@ -1,6 +1,8 @@
 syntax on
 
-colorscheme desert
+set clipboard=unnamedplus
+
+colorscheme simple-dark
 set termguicolors
 
 " Refreshes the file if modified externally
@@ -28,7 +30,8 @@ hi StatusLineNC guifg=black guibg=darkred
 set autoindent
 
 " set number " Uncomment to have normal line numbers
-set relativenumber " Use relative line numbers for easier jumping
+set number relativenumber
+set nu rnu
 
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
@@ -43,4 +46,4 @@ nnoremap <silent> K :call <SID>show_documentation()<CR>
 
 call plug#begin()
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-call plug#end()
+call plug#end()syntax on
