@@ -150,6 +150,7 @@ alias bset="sudo brightnessctl set"
 
 # Tmux aliases
 alias t="tmux new-session -s"
+alias tm="tmux"
 alias ta="tmux attach -t"
 alias tl="tmux ls"
 
