@@ -1,6 +1,6 @@
 -- TODO(map) Write a todo-ist plugin to search only for todo stuff
 vim.g.mapleader = " "
-vim.opt.timeoutlen = 150
+vim.opt.timeoutlen = 250
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -17,8 +17,15 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup("plugins")
 
+vim.o.hidden = false
+
 -- Set color
 vim.cmd.colorscheme("kanagawa")
+-- vim.cmd.colorscheme("tokyonight")
+-- vim.cmd.colorscheme("cyberdream")
+-- vim.cmd.colorscheme("aurora")
+-- vim.cmd.colorscheme("bamboo")
+-- vim.cmd.colorscheme("blossom")
 
 -- Set split preferences
 vim.o.splitright = true
@@ -107,10 +114,18 @@ vim.keymap.set("n", "gh", vim.lsp.buf.hover)
 vim.keymap.set("n", "gr", ":PreviewMe<cr>")
 vim.keymap.set("n", "gro", vim.lsp.buf.references)
 
+-- Buffer management
+vim.keymap.set("n", "<leader>b", ":BufferMe<cr>")
+vim.keymap.set("n", "<leader>ba", ":BufferAppend<cr>")
+vim.keymap.set("n", "<leader>bb", ":BufferAddAll<cr>")
+vim.keymap.set("n", "<leader>bs", ":BufferSet<cr>")
+vim.keymap.set("n", "<leader>bd", ":BufferRemove<cr>")
+vim.keymap.set("n", "<leader>br", ":BufferClearAll<cr>")
+
 -- Mapping Searching keys
 vim.keymap.set("n", "<leader>d", ":Telescope fd<cr>")
 vim.keymap.set("n", "<leader>f", ":Telescope live_grep<cr>")
-vim.keymap.set("n", "<leader>b", ":Telescope buffers<cr>")
+-- vim.keymap.set("n", "<leader>b", ":Telescope buffers<cr>")
 vim.keymap.set("n", "<leader>x", ":nohl<cr>")
 
 -- -- Mapping Navigation keys
