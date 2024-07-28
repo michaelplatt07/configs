@@ -121,6 +121,8 @@ vim.keymap.set("n", "<leader>bb", ":BufferAddAll<cr>")
 vim.keymap.set("n", "<leader>bs", ":BufferSet<cr>")
 vim.keymap.set("n", "<leader>bd", ":BufferRemove<cr>")
 vim.keymap.set("n", "<leader>br", ":BufferClearAll<cr>")
+vim.keymap.set("n", "<leader>bn", ":BufferGoNext<cr>")
+vim.keymap.set("n", "<leader>bp", "::BufferPrevNext<cr>")
 
 -- Mapping Searching keys
 vim.keymap.set("n", "<leader>d", ":Telescope fd<cr>")
