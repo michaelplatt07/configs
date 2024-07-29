@@ -122,7 +122,10 @@ vim.keymap.set("n", "<leader>bs", ":BufferSet<cr>")
 vim.keymap.set("n", "<leader>bd", ":BufferRemove<cr>")
 vim.keymap.set("n", "<leader>br", ":BufferClearAll<cr>")
 vim.keymap.set("n", "<leader>bn", ":BufferGoNext<cr>")
-vim.keymap.set("n", "<leader>bp", "::BufferPrevNext<cr>")
+vim.keymap.set("n", "<leader>bp", ":BufferPrevNext<cr>")
+vim.keymap.set("n", "<leader>btf", ":BufferSetFirstHotswap<cr>")
+vim.keymap.set("n", "<leader>bts", ":BufferSetSecondHotswap<cr>")
+vim.keymap.set("n", "<leader><tab>", ":BufferToggleHotswap<cr>")
 
 -- Mapping Searching keys
 vim.keymap.set("n", "<leader>d", ":Telescope fd<cr>")
