@@ -5,6 +5,7 @@ return {
 		lspconfig.jedi_language_server.setup({})
 		lspconfig.jdtls.setup({})
 		lspconfig.clangd.setup({})
+		lspconfig.cpplint.setup({})
 		lspconfig.html.setup({})
 		lspconfig.dockerls.setup({})
 		lspconfig.quick_lint_js.setup({})

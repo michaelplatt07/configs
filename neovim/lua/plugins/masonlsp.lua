@@ -5,6 +5,7 @@ return {
 			"jedi_language_server",
 			"jdtls",
 			"clangd",
+			"cpplint",
 			"html",
 			"dockerls",
 			"quick_lint_js",
