@@ -65,6 +65,17 @@ vim.cmd("set tabstop=4")
 vim.cmd("set shiftwidth=4")
 vim.cmd("set expandtab")
 
+-- C++ specific tab width
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = { "cpp", "h", "hpp" }, -- Set for cpp, h, and hpp files
+	callback = function()
+		vim.opt_local.shiftwidth = 2 -- Number of spaces for indentation
+		vim.opt_local.tabstop = 2 -- Number of spaces per tab
+		vim.opt_local.softtabstop = 2 -- Number of spaces for a soft tab
+		vim.opt_local.expandtab = true -- Use spaces instead of tabs
+	end,
+})
+
 -- Set the scrolloff to put lines above and below the cursor
 vim.cmd("set scrolloff=5")
 vim.cmd("set nowrap")
