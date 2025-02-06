@@ -16,6 +16,15 @@ return {
 				cpp = {
 					require("formatter.filetypes.cpp").clangformat,
 				},
+				html = {
+					require("formatter.filetypes.html").prettier,
+				},
+				typescript = {
+					require("formatter.filetypes.typescript").prettier,
+				},
+				scss = {
+					require("formatter.filetypes.css").prettier,
+				},
 			},
 		})
 	end,

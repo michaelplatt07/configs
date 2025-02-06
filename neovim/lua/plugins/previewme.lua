@@ -3,6 +3,6 @@ return {
 	branch = "main",
 	config = function()
 		local previewme = require("preview-me")
-		previewme.setup()
+		previewme.setup({})
 	end,
 }

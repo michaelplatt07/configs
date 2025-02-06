@@ -3,14 +3,14 @@ return {
 	opts = {
 		ensure_installed = {
 			"jedi_language_server",
+			"ruff",
 			"jdtls",
 			"clangd",
-			"cpplint",
 			"html",
 			"dockerls",
 			"quick_lint_js",
 			"ansiblels",
-			"angularls",
+			"ts_ls",
 			"lua_ls",
 			"gopls",
 		},

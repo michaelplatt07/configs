@@ -65,7 +65,7 @@ vim.cmd("set tabstop=4")
 vim.cmd("set shiftwidth=4")
 vim.cmd("set expandtab")
 
--- C++ specific tab width
+-- Set tab width for C++ files only
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = { "cpp", "h", "hpp" }, -- Set for cpp, h, and hpp files
 	callback = function()
@@ -134,9 +134,12 @@ vim.keymap.set("n", "<leader>bd", ":BufferRemove<cr>")
 vim.keymap.set("n", "<leader>br", ":BufferClearAll<cr>")
 vim.keymap.set("n", "<leader>bn", ":BufferGoNext<cr>")
 vim.keymap.set("n", "<leader>bp", ":BufferPrevNext<cr>")
-vim.keymap.set("n", "<leader>btf", ":BufferSetFirstHotswap<cr>")
-vim.keymap.set("n", "<leader>bts", ":BufferSetSecondHotswap<cr>")
+vim.keymap.set("n", "<leader>bfs", ":BufferSetFirstHotswap<cr>")
+vim.keymap.set("n", "<leader>bfo", ":BufferOpenFirstHotswap<cr>")
+vim.keymap.set("n", "<leader>bss", ":BufferSetSecondHotswap<cr>")
+vim.keymap.set("n", "<leader>bso", ":BufferOpenSecondHotswap<cr>")
 vim.keymap.set("n", "<leader><tab>", ":BufferToggleHotswap<cr>")
+vim.keymap.set("n", "<leader><space>", ":BufferOpenMostRecent<cr>")
 
 -- Mapping Searching keys
 vim.keymap.set("n", "<leader>d", ":Telescope fd<cr>")
