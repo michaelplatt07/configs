@@ -40,7 +40,9 @@ vim.cmd("set laststatus=2")
 vim.cmd("set hlsearch")
 
 -- Global clipboard
-vim.api.nvim_set_option("clipboard", "unnamed")
+vim.api.nvim_set_option_value("clipboard", "unnamed", {scope="global"})
+vim.keymap.set("v", "<leader>y", '"+y')
+
 
 -- Automatically format a file
 local augroup = vim.api.nvim_create_augroup
@@ -49,6 +51,14 @@ augroup("__formatter__", { clear = true })
 autocmd("BufWritePost", {
 	group = "__formatter__",
 	command = ":FormatWrite",
+})
+
+-- Automatically isort
+augroup("__isorter__", { clear = true })
+autocmd("BufWritePost", {
+	group = "__isorter__",
+    pattern = "*.py",
+	command = ":silent! !isort %",
 })
 
 -- Set cursor configurations
