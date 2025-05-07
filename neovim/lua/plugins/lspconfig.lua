@@ -3,7 +3,6 @@ return {
 	config = function()
 		local lspconfig = require("lspconfig")
 		lspconfig.jedi_language_server.setup({})
-		lspconfig.ruff.setup({})
 		lspconfig.jdtls.setup({})
 		lspconfig.clangd.setup({})
 		-- lspconfig.cpplint.setup({})

@@ -19,6 +19,12 @@ return {
 				html = {
 					require("formatter.filetypes.html").prettier,
 				},
+                htmlangular = {
+					require("formatter.filetypes.html").prettier,
+				},
+                json = {
+					require("formatter.filetypes.html").prettier,
+				},
 				typescript = {
 					require("formatter.filetypes.typescript").prettier,
 				},
