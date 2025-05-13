@@ -3,6 +3,7 @@ return {
 	opts = {
 		ensure_installed = {
 			"jedi_language_server",
+			"ruff",
 			"jdtls",
 			"clangd",
 			"html",
