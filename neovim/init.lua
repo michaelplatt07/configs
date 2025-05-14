@@ -157,7 +157,13 @@ vim.keymap.set("n", "<leader>f", ":Telescope live_grep<cr>")
 -- vim.keymap.set("n", "<leader>b", ":Telescope buffers<cr>")
 vim.keymap.set("n", "<leader>x", ":nohl<cr>")
 
--- -- Mapping Navigation keys
+-- Buffer swap commands
+vim.keymap.set("n", "<leader>sh", ":lua require('swap-buffers').swap_buffers('h')<cr>")
+vim.keymap.set("n", "<leader>sl", ":lua require('swap-buffers').swap_buffers('l')<cr>")
+vim.keymap.set("n", "<leader>sj", ":lua require('swap-buffers').swap_buffers('j')<cr>")
+vim.keymap.set("n", "<leader>sk", ":lua require('swap-buffers').swap_buffers('k')<cr>")
+
+-- Mapping Navigation keys
 vim.keymap.set("n", "<leader>t", ":tabe<cr>")
 vim.keymap.set("n", "+", "gt")
 vim.keymap.set("n", "-", "gT")
