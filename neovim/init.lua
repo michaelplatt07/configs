@@ -40,9 +40,9 @@ vim.cmd("set laststatus=2")
 vim.cmd("set hlsearch")
 
 -- Global clipboard
-vim.api.nvim_set_option_value("clipboard", "unnamed", {scope="global"})
+-- Note that for Debian you need xclip installed
+vim.api.nvim_set_option_value("clipboard", "unnamedplus", { scope = "global" })
 vim.keymap.set("v", "<leader>y", '"+y')
-
 
 -- Automatically format a file
 local augroup = vim.api.nvim_create_augroup
