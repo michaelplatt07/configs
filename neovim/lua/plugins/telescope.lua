@@ -1,6 +1,6 @@
 return {
 	"nvim-telescope/telescope.nvim",
-	tag = "0.1.6",
+	tag = "0.1.8",
 	dependencies = { "nvim-lua/plenary.nvim" },
 	config = function()
 		local actions = require("telescope.actions")
@@ -19,7 +19,7 @@ return {
 						["<c-d>"] = actions.delete_buffer + actions.move_to_top,
 						["<c-t>"] = actions.file_tab,
 						["<c-v>"] = actions.file_vsplit,
-						["<c-h>"] = actions.file_split,
+						["<c-s>"] = actions.file_split,
 					},
 				},
 			},
