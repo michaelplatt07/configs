@@ -5,7 +5,7 @@ return {
 	config = function()
 		local actions = require("telescope.actions")
 		require("telescope").setup({
-			default = {
+			defaults = {
 				mappings = {
 					i = {
 						["<c-d>"] = actions.delete_buffer + actions.move_to_top,

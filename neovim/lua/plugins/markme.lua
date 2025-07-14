@@ -2,6 +2,9 @@ return {
 	"michaelplatt07/mark-me.nvim",
 	branch = "main",
 	config = function()
-		local markme = require("mark-me")
+		local bufferme = require("mark-me")
+		bufferme.setup({
+			auto_manage = true,
+		})
 	end,
 }
