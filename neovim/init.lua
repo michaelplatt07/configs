@@ -141,6 +141,11 @@ function split_h_go_to_def()
 	vim.lsp.buf.definition()
 end
 
+function open_help_window()
+	vim.lsp.buf.hover()
+	vim.lsp.buf.hover()
+end
+
 -- Code navigation
 vim.keymap.set("n", "<leader>.", ":bn<cr>")
 vim.keymap.set("n", "<leader>,", ":bp<cr>")
@@ -151,7 +156,7 @@ vim.keymap.set("n", "gvd", split_v_go_to_def)
 vim.keymap.set("n", "mvd", mark_v_go_to_def)
 vim.keymap.set("n", "ghd", split_h_go_to_def)
 vim.keymap.set("n", "mhd", mark_h_go_to_def)
-vim.keymap.set("n", "gh", vim.lsp.buf.hover)
+vim.keymap.set("n", "gh", open_help_window)
 vim.keymap.set("n", "gr", ":PreviewMe<cr>")
 vim.keymap.set("n", "gro", vim.lsp.buf.references)
 
