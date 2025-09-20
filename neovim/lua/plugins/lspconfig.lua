@@ -1,5 +1,6 @@
 return {
 	"neovim/nvim-lspconfig",
+    branch="master",
 	config = function()
 		-- local lspconfig = require("lspconfig")
 		-- vim.lsp.config.cpplint.setup({})
