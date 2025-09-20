@@ -19,10 +19,10 @@ return {
 				html = {
 					require("formatter.filetypes.html").prettier,
 				},
-                htmlangular = {
+				htmlangular = {
 					require("formatter.filetypes.html").prettier,
 				},
-                json = {
+				json = {
 					require("formatter.filetypes.html").prettier,
 				},
 				typescript = {
@@ -30,6 +30,9 @@ return {
 				},
 				scss = {
 					require("formatter.filetypes.css").prettier,
+				},
+				rust = {
+					require("formatter.filetypes.rust").rustfmt,
 				},
 			},
 		})
