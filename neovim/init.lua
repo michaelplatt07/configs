@@ -57,7 +57,7 @@ autocmd("BufWritePost", {
 augroup("__isorter__", { clear = true })
 autocmd("BufWritePost", {
 	group = "__isorter__",
-    pattern = "*.py",
+	pattern = "*.py",
 	command = ":silent! !isort %",
 })
 
