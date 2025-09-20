@@ -3,5 +3,8 @@ return {
 	branch = "main",
 	config = function()
 		local markme = require("mark-me")
+		markme.setup({
+			autopop = true,
+		})
 	end,
 }

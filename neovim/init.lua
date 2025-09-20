@@ -40,9 +40,8 @@ vim.cmd("set laststatus=2")
 vim.cmd("set hlsearch")
 
 -- Global clipboard
-vim.api.nvim_set_option_value("clipboard", "unnamed", {scope="global"})
+vim.api.nvim_set_option_value("clipboard", "unnamed", { scope = "global" })
 vim.keymap.set("v", "<leader>y", '"+y')
-
 
 -- Automatically format a file
 local augroup = vim.api.nvim_create_augroup
@@ -57,7 +56,7 @@ autocmd("BufWritePost", {
 augroup("__isorter__", { clear = true })
 autocmd("BufWritePost", {
 	group = "__isorter__",
-    pattern = "*.py",
+	pattern = "*.py",
 	command = ":silent! !isort %",
 })
 
@@ -114,6 +113,23 @@ vim.keymap.set("n", "<leader>j", ":wincmd j<cr>")
 vim.keymap.set("n", "<leader>k", ":wincmd k<cr>")
 
 -- Custom code navigation functions
+function mark_go_to_def()
+	vim.cmd("MarkMeAdd")
+	vim.lsp.buf.definition()
+end
+
+function mark_v_go_to_def()
+	vim.cmd("MarkMeAdd")
+	vim.cmd("vsplit")
+	vim.lsp.buf.definition()
+end
+
+function mark_h_go_to_def()
+	vim.cmd("MarkMeAdd")
+	vim.cmd("split")
+	vim.lsp.buf.definition()
+end
+
 function split_v_go_to_def()
 	vim.cmd("vsplit")
 	vim.lsp.buf.definition()
@@ -129,8 +145,11 @@ vim.keymap.set("n", "<leader>.", ":bn<cr>")
 vim.keymap.set("n", "<leader>,", ":bp<cr>")
 vim.keymap.set("n", "<leader>e", ":Ex<cr>")
 vim.keymap.set("n", "gd", vim.lsp.buf.definition)
+vim.keymap.set("n", "md", mark_go_to_def)
 vim.keymap.set("n", "gvd", split_v_go_to_def)
+vim.keymap.set("n", "mvd", mark_v_go_to_def)
 vim.keymap.set("n", "ghd", split_h_go_to_def)
+vim.keymap.set("n", "mhd", mark_h_go_to_def)
 vim.keymap.set("n", "gh", vim.lsp.buf.hover)
 vim.keymap.set("n", "gr", ":PreviewMe<cr>")
 vim.keymap.set("n", "gro", vim.lsp.buf.references)
@@ -150,6 +169,10 @@ vim.keymap.set("n", "<leader>bss", ":BufferSetSecondHotswap<cr>")
 vim.keymap.set("n", "<leader>bso", ":BufferOpenSecondHotswap<cr>")
 vim.keymap.set("n", "<leader><tab>", ":BufferToggleHotswap<cr>")
 vim.keymap.set("n", "<leader><space>", ":BufferOpenMostRecent<cr>")
+
+-- Mark management
+vim.keymap.set("n", "<leader>ma", ":MarkMeAdd<cr>")
+vim.keymap.set("n", "<leader>m", ":MarkMeOpen<cr>")
 
 -- Mapping Searching keys
 vim.keymap.set("n", "<leader>d", ":Telescope fd<cr>")

@@ -13,34 +13,34 @@ return {
 		local cmp = require("cmp")
 		local capabilities = require("cmp_nvim_lsp").default_capabilities()
 		-- add a capabilities for each of the servers configured.
-		require("lspconfig")["jedi_language_server"].setup({
+		vim.lsp.config("jedi_language_server", {
 			capabilities = capabilities,
 		})
-		require("lspconfig")["jdtls"].setup({
+		vim.lsp.config("jdtls", {
 			capabilities = capabilities,
 		})
-		require("lspconfig")["clangd"].setup({
+		vim.lsp.config("clangd", {
 			capabilities = capabilities,
 		})
-		require("lspconfig")["html"].setup({
+		vim.lsp.config("html", {
 			capabilities = capabilities,
 		})
-		require("lspconfig")["dockerls"].setup({
+		vim.lsp.config("dockerls", {
 			capabilities = capabilities,
 		})
-		require("lspconfig")["quick_lint_js"].setup({
+		vim.lsp.config("quick_lint_js", {
 			capabilities = capabilities,
 		})
-		require("lspconfig")["ansiblels"].setup({
+		vim.lsp.config("ansiblels", {
 			capabilities = capabilities,
 		})
-		require("lspconfig")["angularls"].setup({
+		vim.lsp.config("angularls", {
 			capabilities = capabilities,
 		})
-		require("lspconfig")["gopls"].setup({
+		vim.lsp.config("gopls", {
 			capabilities = capabilities,
 		})
-		require("lspconfig")["gleam"].setup({
+		vim.lsp.config("gleam", {
 			capabilities = capabilities,
 		})
 		cmp.setup({
