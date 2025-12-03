@@ -1,6 +1,6 @@
 return {
 	"neovim/nvim-lspconfig",
-    branch="master",
+	branch = "master",
 	config = function()
 		-- local lspconfig = require("lspconfig")
 		-- vim.lsp.config.cpplint.setup({})
@@ -13,7 +13,15 @@ return {
 		vim.lsp.config("ansiblels", {})
 		vim.lsp.config("asm_lsp", {})
 		vim.lsp.config("gleam", {})
-		vim.lsp.config("lua_ls", {})
+		vim.lsp.config("lua_ls", {
+			settings = {
+				Lua = {
+					diagnostics = {
+						globals = { "describe", "it", "assert", "setup", "teardown" },
+					},
+				},
+			},
+		})
 		vim.lsp.config("gopls", {})
 		vim.lsp.config("ts_ls", {})
 		vim.lsp.config("ruff", {})
