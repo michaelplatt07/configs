@@ -28,11 +28,17 @@ return {
 				typescript = {
 					require("formatter.filetypes.typescript").prettier,
 				},
+				typescriptreact = {
+					require("formatter.filetypes.typescript").prettier,
+				},
 				scss = {
 					require("formatter.filetypes.css").prettier,
 				},
 				rust = {
 					require("formatter.filetypes.rust").rustfmt,
+				},
+				javascript = {
+					require("formatter.filetypes.javascript").prettier,
 				},
 			},
 		})
