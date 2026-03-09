@@ -72,6 +72,10 @@ ZSH_THEME="duellj"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
     git
+    zsh-autosuggestions
+    zsh-syntax-highlighting 
+    fast-syntax-highlighting
+    zsh-navigation-tools
     zsh-autocomplete
 )
 
@@ -109,9 +113,6 @@ export NVM_DIR="$HOME/.nvm"
 # Add Go to the path
 export PATH=$PATH:/usr/local/go/bin
 
-# AutoSuggestion configs.
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-
 # AutoComplete configs.
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
@@ -126,7 +127,6 @@ zstyle :compinstall filename '/home/michael/.zshrc'
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#6f0087,bg=#000000,bold,underline"
 ZSH_AUTOSUGGEST_ACCEPT_WIDGETS=("${(@)ZSH_AUTOSUGGEST_ACCEPT_WIDGETS:#forward-char}")
 ZSH_AUTOSUGGEST_PARTIAL_ACCEPT_WIDGETS+=(forward-char)
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 autoload -Uz compinit
 compinit
@@ -144,7 +144,7 @@ alias gc="git commit -v"
 alias gco="git checkout"
 alias grh="git reset HEAD"
 alias cnvt="youtube-dl --extract-audio --audio-format \"mp3\""
-alias notes="/home/michael/Joplin-2.8.8.AppImage"
+alias notes="/home/michael/Joplin-3.4.12.AppImage"
 alias prgm="/home/michael/Desktop/programming/"
 alias bset="sudo brightnessctl set"
 
