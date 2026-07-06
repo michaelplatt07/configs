@@ -13,6 +13,7 @@ return {
 				"vim",
 				"vimdoc",
 				"comment",
+				"dockerfile",
 			},
 			highlight = { enable = true },
 		})
