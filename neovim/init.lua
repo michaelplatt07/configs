@@ -112,6 +112,8 @@ vim.keymap.set("n", "<leader>h", ":wincmd h<cr>")
 vim.keymap.set("n", "<leader>l", ":wincmd l<cr>")
 vim.keymap.set("n", "<leader>j", ":wincmd j<cr>")
 vim.keymap.set("n", "<leader>k", ":wincmd k<cr>")
+vim.keymap.set("n", "<leader>hh", ":tabnext<cr>")
+vim.keymap.set("n", "<leader>ll", ":tabprevious<cr>")
 
 -- Custom code navigation functions
 function mark_go_to_def()
@@ -158,6 +160,7 @@ vim.keymap.set("n", "ghd", split_h_go_to_def)
 vim.keymap.set("n", "mhd", mark_h_go_to_def)
 vim.keymap.set("n", "gh", open_help_window)
 vim.keymap.set("n", "gr", ":PreviewMe<cr>")
+vim.keymap.set("n", "grs", ":PreviewMeSaved<cr>")
 vim.keymap.set("n", "gro", vim.lsp.buf.references)
 vim.keymap.set("n", "<leader>vd", vim.diagnostic.open_float)
 
@@ -176,6 +179,13 @@ vim.keymap.set("n", "<leader>bss", ":BufferSetSecondHotswap<cr>")
 vim.keymap.set("n", "<leader>bso", ":BufferOpenSecondHotswap<cr>")
 vim.keymap.set("n", "<leader><tab>", ":BufferToggleHotswap<cr>")
 vim.keymap.set("n", "<leader><space>", ":BufferOpenMostRecent<cr>")
+
+-- Pop out capability
+vim.keymap.set("n", "<leader>po", ":Popper<cr>")
+vim.keymap.set("n", "<leader>co", ":only<cr>")
+
+-- AI
+vim.keymap.set("n", "<leader>ai", ":CodeCompanionChat<cr>")
 
 -- Mark management
 vim.keymap.set("n", "<leader>m", ":MarkMeOpen<cr>")
